@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title></title>
+        <link href="./styles/style.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    </head>
+    <body>
+        <div
+            class="s-layout">
+            <!-- Sidebar -->
+            <div class="s-layout__sidebar">
+                <a class="s-sidebar__trigger" href="#0">
+                    <i class="fa fa-bars"></i>
+                </a>
+
+                <nav class="s-sidebar__nav">
+                    <ul>
+                        <li>
+                            <a class="s-sidebar__nav-link" href="#" onclick="showContent('home')">
+                                <i class="fa fa-home"></i>
+                                <em>Home</em>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="s-sidebar__nav-link" href="#" onclick="showContent('contact')">
+                                <i class="fa fa-envelope"></i>
+                                <em>Contact</em>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="s-sidebar__nav-link" href="#" onclick="showContent('information')">
+                                <i class="fa fa-info-circle"></i>
+                                <em>Information</em>
+                            </a>
+                        </li>
+                    </li>
+                    <li>
+                        <a class="s-sidebar__nav-link" href="#" onclick="showContent('guide')">
+                            <i class="fa fa-book"></i>
+                            <em>Guide</em>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Content -->
+            <!-- <main>                                                                                                                                                                                                                                                                                                                                                          </main> -->
+            <main class="s-layout__content" id="s-layout__content">
+                <div class="container">
+                    <div class="section-container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-lg-10 col-xl-8">
+                                <div class="header-section text-center">
+                                    <h2 class="title">This is Home Page
+                                        <span class="dot"></span>
+
+                                    </h2>
+                                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consectetur commodo risus, nec pellentesque turpis efficitur non.</p>
+
+                                </div>
+
+                            </div>
+                            <div class="col-12 col-lg-2 col-xl-4">
+                                <img src="./assets/landingpage.png" alt="Image description">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+        </div>
+
+        <script>
+            function showContent(contentType) {
+                var content = document.getElementById("s-layout__content");
+                console.log(content)
+                var html = "";
+
+                if (contentType === "home") {
+                    html = `<div class="container">
+                    <div class="section-container">
+                    <div class="row justify-content-center">
+                    <div class="col-12 col-lg-10 col-xl-8">
+                    <div class="header-section text-center">
+                    <h2 class="title">This is Home Page<span class="dot"></span></h2>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consectetur commodo risus, nec pellentesque turpis efficitur non.</p>
+                    </div>
+                    </div>
+                    <div class="col-12 col-lg-2 col-xl-4">
+                    <img src="./assets/landingpage.png" alt="Image description">
+                    </div>
+                    </div>
+                    </div>
+			    </div>`;
+                } else if (contentType === "contact") {
+                    html = `<div class="container">
+                    <div class="section-container">
+                    <div class="row justify-content-center">
+                    <div class="col-12 col-lg-10 col-xl-8">
+                    <div class="header-section text-center">
+                    <h2 class="title">Get In Touch
+                    <span class="dot"></span>
+                    </h2>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consectetur commodo risus, nec pellentesque turpis efficitur non.</p>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="form-contact">
+                    <form>
+                    <div class="row">
+                    <div class="col-md-6">
+                    <div class="single-input">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="name" placeholder="ENTER YOUR NAME">
+                    </div>
+                    </div>
+                    <div class="col-md-6">
+                    <div class="single-input">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" name="email" placeholder="ENTER YOUR EMAIL">
+                    </div>
+                    </div>
+                    <div class="col-md-6">
+                    <div class="single-input">
+                    <i class="fas fa-phone"></i>
+                    <input type="text" name="phoneNumber" placeholder="ENTER YOUR PHONE NUMBER">
+                    </div>
+                    </div>
+                    <div class="col-md-6">
+                    <div class="single-input">
+                    <i class="fas fa-check"></i>
+                    <input type="text" name="subject" placeholder="ENTER YOUR SUBJECT">
+                    </div>
+                    </div>
+                    <div class="col-12">
+                    <div class="single-input">
+                    <i class="fas fa-comment-dots"></i>
+                    <textarea placeholder="ENTER YOUR MESSAGE"></textarea>
+                    </div>
+                    </div>
+                    <div class="col-12">
+                    <div class="submit-input text-center">
+                    <input type="submit" name="submit" value="SUBMIT NOW">
+                    </div>
+                    </div>
+                    </div>
+                    </form>
+                    </div>
+                    </div>
+	            </div>`;
+                } else if (contentType === "information") {
+                    html = `<div class="container">
+                    <div class="section-container">
+                    <div class="row justify-content-center">
+                    <div class="col-12 col-lg-10 col-xl-8">
+                    <div class="header-section text-center">
+                    <h2 class="title">This is Information Page
+                    <span class="dot"></span>
+                    </h2>
+                    <p class="description">Lorem ipsum dolor sit amet. Aut perspiciatis assumenda 33 galisum unde eos voluptas galisum ut modi optio sit impedit minus sed accusantium recusandae eum error possimus. Ut voluptas magnam cum illo quasi quo nihil enim hic neque mollitia et voluptatem beatae et odio voluptatibus rem omnis ipsum.</p>
+                    </div>
+				</div>
+			</div>`;
+                } else if (contentType === "guide") {
+                    html = `<div class="container">
+                    <div class="section-container">
+                    <div class="row justify-content-center">
+                    <div class="col-12 col-lg-10 col-xl-8">
+                    <div class="header-section text-center">
+                    <h2 class="title">This is Guide Page
+                    <span class="dot"></span>
+                    </h2>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consectetur commodo risus, nec pellentesque turpis efficitur non.</p>
+                    </div>
+                    </div>
+			    </div>`;
+                }
+
+                content.innerHTML = html;
+            }
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    </body>
+</html>
